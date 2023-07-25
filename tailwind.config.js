@@ -49,6 +49,13 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
+
+        // Design colors
+        "color-1": theme.colors.default.theme_color["color-1"],
+        "color-2": theme.colors.default.theme_color["color-2"],
+        "color-3": theme.colors.default.theme_color["color-3"],
+        "color-4": theme.colors.default.theme_color["color-4"],
+        "color-5": theme.colors.default.theme_color["color-5"],
       },
       fontSize: {
         base: font_base + "px",

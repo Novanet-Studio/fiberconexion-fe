@@ -7,7 +7,12 @@
         "body": "#fafafa",
         "border": "#EBEBEB",
         "theme_light": "#E5E5E5",
-        "theme_dark": "#1a202c"
+        "theme_dark": "#1a202c",
+        "color-1": "#785eb0",
+        "color-2": "#564675",
+        "color-3": "#302b2c",
+        "color-4": "#d0d0cd",
+        "color-5": "#f1f1f1"
       },
       "text_color": {
         "default": "#888888",

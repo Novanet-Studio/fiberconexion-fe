@@ -1,10 +1,10 @@
 ---
 banner:
-  title: "Scale design & dev operations with Avocode Enterprise"
-  content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
-  image: /images/banner-img.png
+  title: "Velocidades de conexión rápidas para una navegación más fluida"
+  content: "Descargas rápidas de archivos, transmisión de video de alta definición y juegos en línea sin interrupciones."
+  # image: /images/banner-img.png
   button:
-    label: Download The Theme
+    label: Conoce mas
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
 
