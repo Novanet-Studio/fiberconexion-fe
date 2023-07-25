@@ -5,7 +5,7 @@ banner:
   # image: /images/banner-img.png
   button:
     label: Conoce mas
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    link: "#"
     enable: true
 
 ##key features
@@ -32,6 +32,15 @@ key_features:
         - name: 20 MB
           text: descarga/subida
           description: $100 mensuales
+
+#users
+users_access:
+  title: Acceso al panel de usuarios
+  description: Aquí podrás administrar y controlar diversos aspectos de tu cuenta
+  button:
+    label: Acceder ahora
+    link: "#"
+    enable: true
 
 #service
 service:

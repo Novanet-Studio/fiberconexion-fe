@@ -1,0 +1,29 @@
+---
+import { Image } from "@astrojs/image/components";
+import { markdownify } from "@lib/utils/textConverter";
+const { users_access } = Astro.props;
+const { title, description, button } = users_access;
+---
+
+<section class="section relative border">
+  <div class="container px-16 pt-14 bg-gradient-to-b from-[#302B2C] to-[#564675] text-white rounded-xl">
+    <div class="row justify-between text-center">
+      <div class="lg:col-4 lg:text-end">
+        <h2 class="lg:text-4xl text-white mb-12" set:html={markdownify(title)} />
+        <button class="btn btn-white">
+          {button.label}
+        </button>
+      </div>
+      <div class="lg:col-8 flex flex-col gap-3 lg:text-start">
+        <p class="lg:text-2xl" set:html={markdownify(description)} />
+        <Image
+          class="w-full object-contain"
+          src="/images/design/users.png"
+          alt=""
+          height={40}
+          width={151}
+        />
+      </div>
+    </div>
+  </div>
+</section>
