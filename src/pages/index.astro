@@ -8,9 +8,10 @@ import Service from "@layouts/components/Service.astro";
 import Cta from "@layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
 import Prominent from "@components/Prominent.astro";
+import Gallery from "@components/Gallery.astro";
 
 const homepage = await getEntryBySlug("homepage", "index");
-const { banner, key_features, users_access, prominent, service, testimonial } = homepage.data;
+const { banner, key_features, users_access, prominent, gallery, service, testimonial } = homepage.data;
 ---
 
 <Base>
@@ -22,10 +23,12 @@ const { banner, key_features, users_access, prominent, service, testimonial } = 
   <UsersAccess users_access={users_access} />
   <!-- Prominent -->
   <Prominent prominent={prominent} />
+  <!-- Gallery -->
+  <Gallery gallery={gallery} />
   <!-- service -->
-  <Service service={service} />
+  <!-- <Service service={service} /> -->
   <!-- testimonial -->
-  <Testimonial testimonial={testimonial} />
+  <!-- <Testimonial testimonial={testimonial} /> -->
   <!-- call to action -->
-  <Cta />
+  <!-- <Cta /> -->
 </Base>

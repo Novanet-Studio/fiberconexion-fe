@@ -54,6 +54,14 @@ prominent:
     - name: Telemedicina
       image: "/images/design/prominent-3.jpg"
 
+# Gallery
+gallery:
+  title: "Galería"
+  images:
+    - src: "/images/design/gallery-1.jpg"
+    - src: "/images/design/gallery-2.jpg"
+    - src: "/images/design/gallery-3.jpg"
+
 #service
 service:
   homepage_tab:
