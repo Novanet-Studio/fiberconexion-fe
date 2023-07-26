@@ -1,0 +1,35 @@
+---
+import { markdownify } from "@lib/utils/textConverter";
+import Accordion from "@shortcodes/Accordion";
+const { aditional_services } = Astro.props;
+
+const { title, description, services_list } = aditional_services;
+---
+
+<section class="section mt-12 relative bg-color-5">
+  <div class="container mb-16">
+    <div class="row justify-between text-center lg:text-start mb">
+      <div class="lg:col-12">
+        <h2 class="mb-4 text-4xl" set:html={markdownify(title)} />
+        <p class="lg:text-2xl" set:html={markdownify(description)} />
+      </div>
+    </div>
+    <div class="mt-12">
+      {services_list.map((service: any) => (
+        <Accordion className="" client:load title={service.title}>
+          <div class="p-5 px-8 flex justify-between text-color-3">
+            <ul class="list-disc">
+              {service.list.map((list: any) => (
+                <li>{list}</li>
+              ))}
+            </ul>
+            <div>
+              <p>{service.additional_description}</p>
+              <img src={service.image} alt="">
+            </div>
+          </div>
+        </Accordion>
+      ))}
+    </div>
+  </div>
+</section>

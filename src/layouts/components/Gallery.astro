@@ -11,10 +11,10 @@ const { title, images } = gallery;
         <h2 class="text-center mb-8 text-4xl" set:html={markdownify(title)} />
       </div>
     </div>
-  <div class="w-full columns-2 gap-8">
-    {images.map((image: any, index: number) => (
-      <img class={index === 1 ? 'mt-12' : ''} src={image.src} alt="">
-    ))}
-  </div>
+    <div class="w-full columns-2 gap-8">
+      {images.map((image: any, index: number) => (
+        <img class={index === 1 ? 'mt-12' : ''} src={image.src} alt="">
+      ))}
+    </div>
   </div>
 </section>

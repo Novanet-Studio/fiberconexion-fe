@@ -3,6 +3,7 @@ import Base from "@layouts/Base.astro";
 import Banner from "@layouts/components/Banner.astro";
 import KeyFeatures from "@layouts/components/KeyFeatures.astro";
 import UsersAccess from "@layouts/components/UsersAccess.astro";
+import AdditionalServices from "@layouts/components/AdditionalServices.astro";
 import Testimonial from "@layouts/components/Testimonial.astro";
 import Service from "@layouts/components/Service.astro";
 import Cta from "@layouts/partials/Cta.astro";
@@ -11,7 +12,7 @@ import Prominent from "@components/Prominent.astro";
 import Gallery from "@components/Gallery.astro";
 
 const homepage = await getEntryBySlug("homepage", "index");
-const { banner, key_features, users_access, prominent, gallery, service, testimonial } = homepage.data;
+const { banner, key_features, users_access, prominent, gallery, additional_services, service, testimonial } = homepage.data;
 ---
 
 <Base>
@@ -25,6 +26,8 @@ const { banner, key_features, users_access, prominent, gallery, service, testimo
   <Prominent prominent={prominent} />
   <!-- Gallery -->
   <Gallery gallery={gallery} />
+  <!-- Additional  -->
+  <AdditionalServices aditional_services={additional_services} />
   <!-- service -->
   <!-- <Service service={service} /> -->
   <!-- testimonial -->

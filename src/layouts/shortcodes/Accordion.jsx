@@ -6,13 +6,14 @@ const Accordion = ({ title, children, className }) => {
   return (
     <div className={`rounded border border-border ${className}`}>
       <button
-        className="relative block w-full  bg-theme-light px-4 py-3 text-left text-dark"
+        className={`relative flex items-center transition gap-3 w-full px-4 py-3 text-left ${show ? 'bg-color-1 text-white' : 'bg-white text-color-3'}`}
         onClick={() => setShow(!show)}
       >
+        <div className="w-4 h-4 rounded-full bg-color-2"></div>
         {title}
         <svg
-          className={`absolute right-4 top-1/2 m-0 h-4 w-4 -translate-y-1/2 ${
-            show && "rotate-180"
+          className={`absolute right-4 top-1/2 m-0 h-4 w-4 transition -translate-y-1/2 ${
+            show ? "rotate-180 text-white" : 'text-color-2'
           }`}
           x="0px"
           y="0px"

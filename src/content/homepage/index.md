@@ -62,6 +62,33 @@ gallery:
     - src: "/images/design/gallery-2.jpg"
     - src: "/images/design/gallery-3.jpg"
 
+# Aditional Services
+additional_services:
+  title: Servicios adicionales
+  description: ¡Los mejores planes adaptados a cada necesidad de navegación!
+  services_list:
+    - title: Corporativos
+      additional_description: Lorem ipsum dolor sit am equivalents
+      image: "/images/design/service-3.jpg"
+      list:
+        - Lorem impusim asdjasdnm kaslnd alksm
+        - Ipsum jasdjasn js daskjda skdnk asdjasn
+        - Lorem impusim as as insutmao cnas
+    - title: Residenciales
+      additional_description: Lorem ipsum dolor sit am equivalents
+      image: "/images/design/service-3.jpg"
+      list:
+        - Lorem impusim asdjasdnm kaslnd alksm
+        - Ipsum jasdjasn js daskjda skdnk asdjasn
+        - Lorem impusim as insutmao cnas
+    - title: Empresariales
+      additional_description: Documento de equipos por los que se provee el servicio
+      image: "/images/design/service-3.jpg"
+      list:
+        - Orden de los cables de conexión.
+        - Luces de estatus del equipo y servicio.
+        - Instrucciones generales de los equipos.
+
 #service
 service:
   homepage_tab:
