@@ -1,0 +1,35 @@
+---
+import { markdownify } from "@lib/utils/textConverter";
+const { prominent } = Astro.props;
+const { title, description, features } = prominent;
+---
+
+<section class="section key-feature relative">
+  <div class="container mb-16">
+    <div class="row justify-between text-center lg:text-start">
+      <div class="lg:col-12">
+        <h2 class="text-center" set:html={markdownify(title)} />
+        <p class="text-center" set:html={markdownify(description)} />
+      </div>
+    </div>
+  </div>
+  <div class="w-full grid grid-cols-3 relative">
+    {features.map((feature: any) => (
+      <div>
+        <img src={feature.image} alt="">
+      </div>
+    ))}
+    <div class="absolute -bottom-[130px] w-full flex justify-center">
+      <div class="flex justify-center px-5 py-12 bg-white shadow-md rounded-xl gap-4">
+        {features.map((feature: any, index: number) => (
+          <div class="py-6 px-28 relative border-r border-color-4 last:border-none">
+            <h4 class="text-color-3 text-2xl font-extrabold">{feature.name}</h4>
+            <div class="absolute -top-24 left-0 w-full flex justify-center">
+              <span class="w-20 h-20 bg-color-1 rounded-full text-white text-2xl flex items-center justify-center">0{index}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

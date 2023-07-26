@@ -42,6 +42,18 @@ users_access:
     link: "#"
     enable: true
 
+# Prominent
+prominent:
+  title: La tecnología de internet FTTH
+  description: Te permitirá disfrutar de una mayor calidad de conexión a internet y facilitará el acceso a servicios y aplicaciones que requieren un ancho de banda considerable
+  features:
+    - name: Trabajo remoto
+      image: "/images/design/prominent-1.jpg"
+    - name: Streaming de clases online, videojuegos
+      image: "/images/design/prominent-2.jpg"
+    - name: Telemedicina
+      image: "/images/design/prominent-3.jpg"
+
 #service
 service:
   homepage_tab:
