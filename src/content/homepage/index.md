@@ -89,6 +89,17 @@ additional_services:
         - Luces de estatus del equipo y servicio.
         - Instrucciones generales de los equipos.
 
+# Coverage areas
+coverage_areas:
+  title: Zonas de cobertura
+  areas_list:
+    - title: Sucre
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - title: Plaza
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - title: Zamora
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 #service
 service:
   homepage_tab:

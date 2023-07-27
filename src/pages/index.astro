@@ -11,9 +11,10 @@ import { getEntryBySlug } from "astro:content";
 import Prominent from "@components/Prominent.astro";
 import Gallery from "@components/Gallery.astro";
 import Contact from "@components/Contact.astro";
+import CoverageAreas from "@components/CoverageAreas.astro";
 
 const homepage = await getEntryBySlug("homepage", "index");
-const { banner, key_features, users_access, prominent, gallery, additional_services, service, testimonial } = homepage.data;
+const { banner, key_features, users_access, prominent, gallery, additional_services, coverage_areas, service, testimonial } = homepage.data;
 ---
 
 <Base>
@@ -31,6 +32,9 @@ const { banner, key_features, users_access, prominent, gallery, additional_servi
   <AdditionalServices aditional_services={additional_services} />
   <!-- Contact -->
   <Contact />
+  <!-- Coverage Areas -->
+  <CoverageAreas coverage_areas={coverage_areas} />
+
   <!-- service -->
   <!-- <Service service={service} /> -->
   <!-- testimonial -->

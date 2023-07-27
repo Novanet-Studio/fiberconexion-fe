@@ -1,0 +1,26 @@
+---
+import { markdownify } from "@lib/utils/textConverter";
+const { coverage_areas } = Astro.props;
+
+const { title, areas_list } = coverage_areas;
+---
+
+<section class="section mt-12 relative bg-gradient-to-b from-[#302B2C] to-[#564675]">
+  <div class="container mb-16">
+    <div class="row justify-between text-center lg:text-start mb">
+      <div class="lg:col-12">
+        <h2 class="mb-4 text-4xl text-white" set:html={markdownify(title)} />
+      </div>
+    </div>
+    <div class="mt-8">
+      <ul class="grid grid-cols-3 gap-6">
+        {areas_list.map((area: any) => (
+          <li class="p-12 bg-white rounded-md">
+            <h4 class="mb-2">{area.title}</h4>
+            <p>{area.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
