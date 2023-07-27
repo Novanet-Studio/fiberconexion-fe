@@ -1,5 +1,5 @@
 ---
-const { source, className } = Astro.props;
+const { source, className, hideList = {} } = Astro.props;
 
 import {
   IoCall,
@@ -68,6 +68,41 @@ const {
   skype,
   website,
 } = source;
+
+const defaultValues = {
+  facebook: true,
+  twitter: true,
+  instagram: true,
+  youtube: true,
+  linkedin: true,
+  github: true,
+  gitlab: true,
+  medium: true,
+  codepen: true,
+  bitbucket: true,
+  dribbble: true,
+  behance: true,
+  pinterest: true,
+  soundcloud: true,
+  tumblr: true,
+  reddit: true,
+  vk: true,
+  whatsapp: true,
+  snapchat: true,
+  vimeo: true,
+  tiktok: true,
+  foursquare: true,
+  rss: true,
+  email: true,
+  phone: true,
+  address: true,
+  skype: true,
+  website: true
+}
+
+const hide = Object.assign(hideList, defaultValues)
+
+console.log(hide)
 ---
 
 <ul class={className}>
@@ -473,7 +508,7 @@ const {
     )
   }
   {
-    phone && (
+    phone && !hide.phone && (
       <li class="inline-block">
         <a aria-label="telephone" href={`tel:${phone}`}>
           <IoCall />
