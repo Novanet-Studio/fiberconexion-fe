@@ -10,6 +10,7 @@ import Cta from "@layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
 import Prominent from "@components/Prominent.astro";
 import Gallery from "@components/Gallery.astro";
+import Contact from "@components/Contact.astro";
 
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, key_features, users_access, prominent, gallery, additional_services, service, testimonial } = homepage.data;
@@ -28,6 +29,8 @@ const { banner, key_features, users_access, prominent, gallery, additional_servi
   <Gallery gallery={gallery} />
   <!-- Additional  -->
   <AdditionalServices aditional_services={additional_services} />
+  <!-- Contact -->
+  <Contact />
   <!-- service -->
   <!-- <Service service={service} /> -->
   <!-- testimonial -->
