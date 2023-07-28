@@ -29,7 +29,7 @@ const { pathname } = Astro.url;
     <label
       id="show-button"
       for="nav-toggle"
-      class="order-2 flex cursor-pointer items-center lg:order-1 lg:hidden"
+      class="order-3 flex cursor-pointer items-center lg:order-1 lg:hidden"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Open</title>
@@ -39,7 +39,7 @@ const { pathname } = Astro.url;
     <label
       id="hide-button"
       for="nav-toggle"
-      class="order-2 hidden cursor-pointer items-center lg:order-1"
+      class="order-3 hidden cursor-pointer items-center lg:order-1"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Close</title>
@@ -73,7 +73,7 @@ const { pathname } = Astro.url;
       }
     </ul>
 
-    <div class="order-3 ml-28"></div>
+    <div class="order-2 ml-28 lg:order-3"></div>
   </nav>
 </header>
 <script is:inline>
