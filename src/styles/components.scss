@@ -37,19 +37,20 @@
 
 .social-icons-main {
   li {
-    @apply mr-10 inline-block;
+    @apply mr-10 inline-block last:mr-0;
     a {
-      @apply inline-flex h-16 w-16 items-center justify-center rounded-full bg-color-1 text-center transition-all duration-200 shadow-sm hover:bg-white hover:shadow-xl;
+      @apply inline-flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-color-1 text-center transition-all duration-200 shadow-sm hover:bg-white hover:shadow-xl active:bg-white active:shadow-xl;
 
       svg {
-        @apply m-auto h-11 fill-white text-3xl;
+        @apply m-auto h-11 fill-white text-lg md:text-3xl;
       }
 
       path {
         @apply transition-all duration-200;
       }
 
-      &:hover path {
+      &:hover path,
+      &:active path {
         @apply fill-color-1;
       }
     }

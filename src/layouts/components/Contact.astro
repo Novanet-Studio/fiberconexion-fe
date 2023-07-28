@@ -12,7 +12,7 @@ import Social from "./Social.astro";
 
 <section class="section pt-0">
   <div class="container">
-    <div class="flex gap-12">
+    <div class="flex flex-col gap-12 lg:flex-row">
       <div class="md:order-2">
         <h3>Ubicación</h3>
         <div class="p-12 mb-10 text-center md:mb-0 md:pt-9 shadow-xl rounded-xl">
@@ -78,9 +78,9 @@ import Social from "./Social.astro";
         </div>
       </div>
     </div>
-    <div class="mt-12 flex flex-col items-center">
+    <div class="mt-12 flex flex-col items-center justify-center">
       <h4>Encuéntranos también en:</h4>
-      <Social source={social} className="social-icons-main mt-4 lg:mt-6" />
+      <Social source={social} className="social-icons-main mt-6 lg:mt-6" />
     </div>
   </div>
 </section>
