@@ -18,10 +18,10 @@
   li {
     @apply mr-2 inline-block;
     a {
-      @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-center transition-all duration-200 hover:bg-primary;
+      @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-color-1 text-center transition-all duration-200 hover:bg-white hover:shadow-xl;
 
       svg {
-        @apply m-auto h-11 fill-dark text-xl;
+        @apply m-auto h-11 fill-white text-xl;
       }
 
       path {
@@ -29,7 +29,7 @@
       }
 
       &:hover path {
-        @apply fill-white;
+        @apply fill-color-1;
       }
     }
   }
