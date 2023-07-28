@@ -13,17 +13,17 @@ const { title, description, features } = prominent;
       </div>
     </div>
   </div>
-  <div class="w-full grid grid-cols-3 relative">
+  <div class="w-full lg:grid lg:grid-cols-3 relative">
     {features.map((feature: any) => (
-      <div>
+      <div class="hidden lg:block">
         <img src={feature.image} alt="">
       </div>
     ))}
-    <div class="absolute -bottom-[130px] w-full flex justify-center">
-      <div class="flex justify-center px-5 py-12 bg-white shadow-md rounded-xl gap-4">
+    <div class="lg:absolute lg:-bottom-[130px] w-full flex justify-center">
+      <div class="grid grid-cols-1 place-items-center px-5 py-12 bg-white shadow-md rounded-xl gap-24 mt-12 lg:mt-0 lg:grid-cols-3 lg:gap-4">
         {features.map((feature: any, index: number) => (
-          <div class="py-6 px-28 relative border-r border-color-4 last:border-none">
-            <h4 class="text-color-3 text-2xl font-extrabold">{feature.name}</h4>
+          <div class="py-10 px-12 relative border-b border-color-4 mb-8 lg:py-6 lg:px-28 lg:border-b-0 lg:border-r last:border-none lg:mb-0">
+            <h4 class="text-color-3 text-2xl font-extrabold text-center max-w-[12rem] lg:max-w-[16rem]">{feature.name}</h4>
             <div class="absolute -top-24 left-0 w-full flex justify-center">
               <span class="w-20 h-20 bg-color-1 rounded-full text-white text-2xl flex items-center justify-center">0{index}</span>
             </div>
