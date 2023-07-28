@@ -17,7 +17,7 @@ const { title, description, services_list } = aditional_services;
     <div class="mt-12">
       {services_list.map((service: any) => (
         <Accordion className="" client:load title={service.title}>
-          <div class="p-5 px-8 flex justify-between text-color-3">
+          <div class="p-5 md:px-8 flex justify-between gap-4 text-color-3 md:gap-0">
             <ul class="list-disc">
               {service.list.map((list: any) => (
                 <li>{list}</li>
