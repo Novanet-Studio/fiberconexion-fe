@@ -4,7 +4,7 @@ const { banner } = Astro.props;
 const { title, button, content } = banner;
 ---
 
-<section class="section banner relative border border-red-900 bg-[url(/images/design/hero-section.jpg)] bg-center bg-cover">
+<section class="section banner relative bg-[url(/images/design/hero-section.jpg)] bg-center bg-cover">
   <div class="container py-28">
     <div class="row items-center">
       <div class="lg:col-8">
@@ -12,13 +12,15 @@ const { title, button, content } = banner;
 
         <p class="mt-6 text-color-4" set:html={markdownify(content)} />
 
-        {
-          button.enable && (
-            <a class="btn btn-primary-alt mt-8" href={button.link}>
-              {button.label}
-            </a>
-          )
-        }
+        <div class="flex justify-center lg:justify-start">
+          {
+            button.enable && (
+              <a class="btn btn-primary-alt mt-8" href={button.link}>
+                {button.label}
+              </a>
+            )
+          }
+        </div>
       </div>
     </div>
   </div>
