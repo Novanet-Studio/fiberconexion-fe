@@ -58,9 +58,12 @@ const { copyright, location, email, phone, footer_description } = config.params;
   <div class="bg-white">
     <div class="container max-w-[1440px]">
       <div
-        class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
+        class="footer-copyright border-t border-border pb-10 pt-7 text-center flex gap-2 items-center justify-center"
       >
-        <p class="content text-text" set:html={markdownify(copyright)} />
+        <p class="content text-text" set:html={markdownify(copyright.text)} />
+        <a href={copyright.link} target="_blank">
+          <img class="w-20 md:w-24" src={copyright.image} alt="Novanet Logo">
+        </a>
       </div>
     </div>
   </div>
