@@ -11,7 +11,7 @@ const HomapageFeature = ({ plan_list }) => {
               {plan.title}</h3>
             <ul className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3">
               {plan.list.map((item, i) => ((
-                <li className="rounded-lg bg-color-1 text-white p-5 shadow-lg shadow-color-2" key={i}>
+                <li className={`rounded-lg text-white p-8 shadow-lg shadow-color-2 ${i % 2 === 0 ? 'bg-color-2' : 'bg-color-1'}`} key={i}>
                   <h4 className="lg:text-2xl text-white">{item.name}</h4>
                   <span className="lg:text-lg">{item.text}</span>
                   <p className="lg:text-2xl font-bold">{item.description}</p>
