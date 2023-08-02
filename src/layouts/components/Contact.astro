@@ -1,7 +1,62 @@
 ---
-import { Image } from "@astrojs/image/components";
 import social from "@config/social.json";
 import Social from "./Social.astro";
+
+const errors = { name: "", email: "", phone: "", message: "" };
+const emailRegex = new RegExp(/^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/)
+
+const encode = (data: any) =>
+  Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const phone = data.get("phone");
+    const message = data.get("message");
+
+    if (typeof name !== "string") {
+      errors.name += "El nombre es requerido"
+    }
+
+    if (typeof email !== "string" || !emailRegex.test(email)) {
+      errors.email += "El email no es valido"
+    }
+
+    if (typeof phone !== "string" || !phone.length) {
+      errors.phone += "El numero telefonico es requerido"
+    }
+
+    if (typeof message !== "string") {
+      errors.message += "El campo es requerido"
+    }
+
+    const hasErrors = Object.values(errors).some((x) => x)
+
+    if (!hasErrors) {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contacto',
+          nombre: name,
+          email,
+          telefono: phone,
+          mensaje: message,
+        }),
+      });
+    } else {
+      alert('Rellene los campos para poder enviar el formulario.')
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
 <section id="contact" class="page-hero pb-6 pt-16">
@@ -18,31 +73,40 @@ import Social from "./Social.astro";
         <div
           class="p-12 shadow-xl flex justify-center items-center py-12 rounded-xl"
         >
-          <form class="lg:max-w-[484px]" action="#" method="POST">
+          <form
+            class="lg:max-w-[484px]"
+            method="POST"
+            name="contacto"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
             <div class="form-group mb-5">
               <label class="form-label" for="name">Nombre</label>
               <input
                 class="form-control"
                 type="text"
                 id="name"
+                name="name"
                 placeholder="Nombre completo"
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="eamil">Email</label>
+              <label class="form-label" for="email">Email</label>
               <input
                 class="form-control"
                 type="text"
                 id="email"
+                name="email"
                 placeholder="Correo electrónico"
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="eamil">Teléfono</label>
+              <label class="form-label" for="phone">Teléfono</label>
               <input
                 class="form-control"
                 type="text"
                 id="phone"
+                name="phone"
                 placeholder="Teléfono"
               />
             </div>
@@ -51,6 +115,7 @@ import Social from "./Social.astro";
               <textarea
                 class="form-control h-[150px]"
                 id="message"
+                name="message"
                 cols="30"
                 rows="10"></textarea>
             </div>
