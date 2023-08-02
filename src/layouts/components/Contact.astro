@@ -13,24 +13,7 @@ import Social from "./Social.astro";
 <section class="section pt-0">
   <div class="container">
     <div class="flex flex-col gap-12 lg:flex-row">
-      <div class="md:order-2 max-h-full">
-        <h3>Ubicación</h3>
-        <div
-          class="p-12 mb-10 text-center md:mb-0 md:pt-9 shadow-xl rounded-xl"
-        >
-          <div class="contact-img relative block pb-5 pl-5 w-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.3676039677975!2d-66.57684772496238!3d10.471659689659202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2bab01dea7f159%3A0x7eaf8477ea59f000!2sC.C.%20El%20Portal%20de%20Guatire!5e0!3m2!1sen!2sve!4v1690997211797!5m2!1sen!2sve"
-              width="600"
-              height="450"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="md:order-1">
+      <div class="sm:w-full md:w-1/2">
         <h3>Formulario</h3>
         <div
           class="p-12 shadow-xl flex justify-center items-center py-12 rounded-xl"
@@ -77,6 +60,20 @@ import Social from "./Social.astro";
               value="Enviar"
             />
           </form>
+        </div>
+      </div>
+      <div class="sm:w-full md:w-1/2">
+        <h3>Ubicación</h3>
+        <div class="p-6 mb-10 text-center md:mb-0 md:pt-9 shadow-xl rounded-xl">
+          <div class="contact-img relative block pb-5 pl-5 w-full">
+            <iframe
+              class="w-full md:h-[39em]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.3676039677975!2d-66.57684772496238!3d10.471659689659202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2bab01dea7f159%3A0x7eaf8477ea59f000!2sC.C.%20El%20Portal%20de%20Guatire!5e0!3m2!1sen!2sve!4v1690997211797!5m2!1sen!2sve"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
