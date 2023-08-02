@@ -16,6 +16,8 @@ export interface NavigationLink {
 
 const { main }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
+
+console.log(pathname)
 ---
 
 <header class="header">
