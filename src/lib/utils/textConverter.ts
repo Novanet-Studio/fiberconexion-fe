@@ -1,5 +1,16 @@
 import { slug } from 'github-slugger';
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
+
 
 // slugify
 export const slugify = (content: string) => {

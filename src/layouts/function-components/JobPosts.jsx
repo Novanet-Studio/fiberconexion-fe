@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { humanize } from "@lib/utils/textConverter";
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
+
 import { AiOutlineArrowRight } from "react-icons/ai/index.js";
 const JobPosts = ({ posts, categories, career: { title, subtitle } }) => {
   const [tab, setTab] = useState("");

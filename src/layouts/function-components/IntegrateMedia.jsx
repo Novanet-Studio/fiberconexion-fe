@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { humanize } from "@lib/utils/textConverter";
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
 import { AiOutlineArrowRight } from "react-icons/ai/index.js";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
 
 const IntegrateMedia = ({ integrations, categories }) => {
   const [tab, setTab] = useState("");

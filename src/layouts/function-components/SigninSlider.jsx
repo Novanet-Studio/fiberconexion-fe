@@ -1,9 +1,19 @@
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
 import React, { useRef, useState } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
 
 const SigninSlider = ({ title }) => {
   SwiperCore.use([Pagination]);
