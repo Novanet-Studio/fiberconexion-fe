@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "FiberConexion",
+    "title": "Fiberconexión - Sitio web",
     "base_url": "https://pinwheel-astro.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
@@ -8,7 +8,7 @@
     "logo": "/images/design/logo.png",
     "logo_width": "147",
     "logo_height": "89",
-    "logo_text": "FiberConexion"
+    "logo_text": "FiberCcnexion"
   },
 
   "settings": {
@@ -34,9 +34,9 @@
 
   "params": {
     "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "fibexsoporte@gmail.com",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "212 555-0127",
+    "email": "fiberconexion7@gmail.com",
+    "location": "CC Portal de Guatire, Local A-5B",
+    "phone": "0212.414.71.28 / 0414.125.96.25 / 0414.127.24.77",
     "contact_form_action": "#",
     "copyright": {
       "text": "Copyright © 2023 desarrollado por",
@@ -46,8 +46,23 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_title": "Fiberconexión - Sitio web",
+    "meta_name": "Fiberconexión web",
+    "meta_author": "Novanet Studio <info@novanet.studio>",
+    "meta_description": "El único servicio simétrico e ilimitado con la tecnología FTTH para mayor velocidad de conexión",
     "meta_image": "/images/og-image.png",
-    "meta_description": "pinwheel astro"
-  }
+    "meta_theme_color": "#fff",
+    "meta_lang": "es"
+  },
+
+  "manifest": {
+    "name": "Fiberconexión - Sitio web",
+    "short_name": "Fiberconexión web app ",
+    "description": "El único servicio simétrico e ilimitado con la tecnología FTTH para mayor velocidad de conexión",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#785EB0"
+  },
+  "icon": { "source": "images/favicon.png" }
 }

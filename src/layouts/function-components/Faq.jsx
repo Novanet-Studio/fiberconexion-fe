@@ -1,5 +1,15 @@
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
 import { useState } from "react";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
 
 const Faq = ({ data }) => {
   const [isActive, setIsActive] = useState([]);
@@ -29,10 +39,7 @@ const Faq = ({ data }) => {
                   onClick={() => accordionHandler(i)}
                   key={`item-${i}`}
                 >
-                  <div
-                    className="accordion-header relative pl-6 text-lg font-semibold text-dark"
-                    
-                  >
+                  <div className="accordion-header relative pl-6 text-lg font-semibold text-dark">
                     {item.title}
                     <svg
                       className="accordion-icon absolute left-0 top-[22px]"

@@ -1,5 +1,15 @@
 import { marked } from "marked";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
 import { useState } from "react";
+
+marked.use(
+  mangle(),
+  gfmHeadingId({
+    mangle: false,
+    headerIds: false,
+  }),
+);
 
 const FeatureTab = ({ feature_tab }) => {
   const [tab, setTab] = useState(0);
