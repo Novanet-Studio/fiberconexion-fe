@@ -49,7 +49,7 @@ prominent:
   features:
     - name: Trabajo remoto
       image: "/images/design/prominent-1.jpg"
-    - name: Streaming de clases online, videojuegos
+    - name: Streaming, clases online y videojuegos
       image: "/images/design/prominent-2.jpg"
     - name: Telemedicina
       image: "/images/design/prominent-3.jpg"
@@ -64,30 +64,23 @@ gallery:
 
 # Aditional Services
 additional_services:
-  title: Servicios adicionales
-  description: ¡Los mejores planes adaptados a cada necesidad de navegación!
+  title: Información de pago
+  description: Contamos con diversas formas para que efectues los pagos y puedas mantener al día el servicio
   services_list:
-    - title: Corporativos
+    - title: Transferencia bancaria
       additional_description: Lorem ipsum dolor sit am equivalents
       image: "/images/design/service-3.jpg"
       list:
-        - Lorem impusim asdjasdnm kaslnd alksm
-        - Ipsum jasdjasn js daskjda skdnk asdjasn
-        - Lorem impusim as as insutmao cnas
-    - title: Residenciales
+        - Banco Bicentenario del Pueblo
+        - Cuenta Corriente Nº 0175 2667261 
+        - RIF J-31738927-1
+    - title: Pago móvil
       additional_description: Lorem ipsum dolor sit am equivalents
-      image: "/images/design/service-3.jpg"
+      image: "/images/design/service-2.jpg"
       list:
-        - Lorem impusim asdjasdnm kaslnd alksm
-        - Ipsum jasdjasn js daskjda skdnk asdjasn
-        - Lorem impusim as insutmao cnas
-    - title: Empresariales
-      additional_description: Documento de equipos por los que se provee el servicio
-      image: "/images/design/service-3.jpg"
-      list:
-        - Orden de los cables de conexión.
-        - Luces de estatus del equipo y servicio.
-        - Instrucciones generales de los equipos.
+        - Teléfono 04124275779
+        - RIF J-31738927-1
+        - Banco Bicentenario del Pueblo (0175)
 
 # Coverage areas
 coverage_areas:

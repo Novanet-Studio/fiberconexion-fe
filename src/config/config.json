@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Fiberconexión - Sitio web",
-    "base_url": "https://pinwheel-astro.vercel.app",
+    "base_url": "https://fiberconexion.com.ve",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -39,7 +39,7 @@
     "phone": "0212.414.71.28 / 0414.125.96.25 / 0414.127.24.77",
     "contact_form_action": "#",
     "copyright": {
-      "text": "Copyright © 2023 desarrollado por",
+      "text": "Derechos reservados 2023 - Publicado por",
       "link": "https://novanet.studio",
       "image": "/images/design/novanet-logo.svg"
     }

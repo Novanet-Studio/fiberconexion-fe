@@ -16,8 +16,7 @@ const { title, areas_list } = coverage_areas;
       <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {areas_list.map((area: any) => (
           <li class="p-12 bg-white rounded-md">
-            <h4 class="mb-2">{area.title}</h4>
-            <p>{area.description}</p>
+            <h4 class="mb-2 text-center">{area.title}</h4>           
           </li>
         ))}
       </ul>
