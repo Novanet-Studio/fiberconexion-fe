@@ -67,20 +67,27 @@ additional_services:
   title: Información de pago
   description: Contamos con diversas formas para que efectues los pagos y puedas mantener al día el servicio
   services_list:
+    - title: Zelle
+      additional_description: Lorem ipsum dolor sit am equivalents
+      image: "/images/design/service-1.jpg"
+      list:
+        - Arnovi Polania Vega
+        - arnovi_polania@hotmail.com 
     - title: Transferencia bancaria
       additional_description: Lorem ipsum dolor sit am equivalents
       image: "/images/design/service-3.jpg"
       list:
-        - Banco Bicentenario del Pueblo
-        - Cuenta Corriente Nº 0175 2667261 
+        - Bancamiga Bs. 0172 0104 2110 4459 3943 
+        - Bancamiga Dólares 0172 0104 2110 4450 9345 
         - RIF J-31738927-1
     - title: Pago móvil
       additional_description: Lorem ipsum dolor sit am equivalents
       image: "/images/design/service-2.jpg"
       list:
-        - Teléfono 04124275779
+        - Teléfono 04241259625
+        - Bancamiga
         - RIF J-31738927-1
-        - Banco Bicentenario del Pueblo (0175)
+        - Fiberconexion, C.A.
 
 # Coverage areas
 coverage_areas:
